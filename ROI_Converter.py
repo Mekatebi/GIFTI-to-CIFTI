@@ -8,7 +8,7 @@ It processes all .func.gii files in the input directory and creates correspondin
 Features:
 - Converts GIFTI ROI files to CIFTI format
 - Creates dense CIFTI files using wb_command
-- Handles both left and right hemisphere ROIs (must be specified in filename)
+- Handles both left and right hemisphere ROIs (must be specified in the filename)
 
 Requirements:
 - nibabel
