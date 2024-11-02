@@ -1,1 +1,40 @@
-# ROI Converter: GIFTI to CIFTI\n\nA Python tool for converting GIFTI ROI files to CIFTI dense scalar format.\n\n## Description\n\nThis script converts `.func.gii` files to `.dscalar.nii` format, processing all GIFTI files in the specified input directory.\n\n## Features\n\n- Converts GIFTI ROI files to CIFTI format\n- Creates dense CIFTI files using wb_command\n- Handles both left and right hemisphere ROIs\n- Batch processing capabilities\n\n## Requirements\n\n- Python 3.7+\n- nibabel\n- numpy\n- Connectome Workbench (wb_command)\n\n## Setup\n\nConfigure the following paths in the script:\n```python\nCIFTI_TEMPLATE = \"path/to/template.dscalar.nii\"\nINPUT_FOLDER_PATH = \"path/to/input/folder\"\nOUTPUT_FOLDER_PATH = \"path/to/output/folder\"\nWB_COMMAND = \"path/to/wb_command\"\n```\n\n## Usage\n\n1. Place `.func.gii` files in the input folder\n2. Run the script:\n```bash\npython roi_converter.py\n```\n3. Find converted files in the output folder\n\n## Notes\n\n- Input filenames must contain \"LEFT\" or \"RIGHT\" to indicate hemisphere\n- Creates both standard and dense CIFTI files\n- Processes all `.func.gii` files in input directory
+# ROI Converter: GIFTI to CIFTI
+
+A Python tool for converting GIFTI ROI files to CIFTI dense scalar format.
+
+## Description
+This script converts `.func.gii` files to `.dscalar.nii` format, processing all GIFTI files in the specified input directory.
+
+## Features
+* Converts GIFTI ROI files to CIFTI format
+* Creates dense CIFTI files using wb_command
+* Handles both left and right hemisphere ROIs
+* Batch processing capabilities
+
+## Requirements
+* Python 3.7+
+* nibabel
+* numpy
+* Connectome Workbench (wb_command)
+
+## Setup
+Configure the following paths in the script:
+```
+CIFTI_TEMPLATE = "path/to/template.dscalar.nii"
+INPUT_FOLDER_PATH = "path/to/input/folder"
+OUTPUT_FOLDER_PATH = "path/to/output/folder"
+WB_COMMAND = "path/to/wb_command"
+```
+
+## Usage
+1. Place `.func.gii` files in the input folder
+2. Run the script:
+```
+python roi_converter.py
+```
+3. Find converted files in the output folder
+
+## Notes
+* Input filenames must contain "LEFT" or "RIGHT" to indicate hemisphere
+* Creates both standard and dense CIFTI files
+* Processes all `.func.gii` files in input directory
